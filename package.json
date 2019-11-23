@@ -2,7 +2,12 @@
   "name": "js-band-hw",
   "version": "1.0.0",
   "description": "project setup with webpack, eslint, commitizen, jest",
-  "keywords": ["webpack", "eslint", "commitizen", "jest" ],
+  "keywords": [
+    "webpack",
+    "eslint",
+    "commitizen",
+    "jest"
+  ],
   "license": "ISC",
   "scripts": {
     "start": "nodemon",
@@ -19,6 +24,7 @@
     "gh-pages": "gh-pages -d build"
   },
   "dependencies": {
+    "eslint": "^6.7.0",
     "reset-css": "~4.0.1"
   },
   "devDependencies": {
