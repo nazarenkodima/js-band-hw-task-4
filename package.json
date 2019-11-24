@@ -8,7 +8,7 @@
     "commitizen",
     "jest"
   ],
-  "repository": "",
+  "repository": "https://github.com/nazarenkodima/js-band-hw-task-4.git",
   "license": "ISC",
   "scripts": {
     "start": "nodemon",
@@ -18,7 +18,7 @@
     "build:prod-github-pages": "cross-env-shell NODE_ENV=production BUILD_ENV=production DEPLOY_TARGET=github-pages npm run build:config",
     "test": "jest --config=\"./jest/jest.test.config.json\"",
     "test:watch": "npm test -- --watch",
-    "commit": "git-cz && npm run code:lint && npm run test",
+    "commit": "git-cz && jest --config=\"./jest/jest.test.config.json\" && npm run code:lint",
     "code:clean": "yarn code:lint && yarn code:format",
     "code:lint": "eslint --ext .js,.jsx,.ts,.tsx \"source/\" --fix",
     "code:format": "prettier './source/**/**.{js,jsx,ts,tsx}' --write",
