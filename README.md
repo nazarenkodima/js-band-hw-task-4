@@ -6,6 +6,8 @@ Clone this repo and then in command line type:
 
 --
 
+To launch app run `npm run start` or `yarn start` 
+
 ### Project commands
 Command name       | Description                                                      
 :------------------|:----------------------------------
@@ -65,7 +67,7 @@ This folder should be used for deployment
 **jest**  
 Contains jest configuration files
 
-**source/** 
+**source/**  
 The source directory is home to the actual codebase of the application and the target of our build tools
 
 **source/theme**  
@@ -76,6 +78,7 @@ Contains Jest dummy test
 
 **source/static**  
 Contains HTML template fow webpack to use 
+
 Contains favicon
 
 **webpack**
