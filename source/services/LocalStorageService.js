@@ -31,8 +31,9 @@ export default class LocalStorageService {
       localStorageKey = localStorage.getItem(`${this.localStoragePrefix}${key}`);
       localStorageKey = JSON.parse(localStorageKey);
 
-      return localStorageKey;
+
     }
+    return localStorageKey;
   }
 
   saveToken(key, value) {

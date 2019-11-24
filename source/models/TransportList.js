@@ -29,26 +29,27 @@ export default class TransportList {
 
     let ship;
 
+    ship = TransportFactory.createTransport(
+        'ship',
+        id,
+        model,
+        name,
+        producedYear,
+        capacity,
+        averageSpeed,
+        countOfTeam,
+    )
+
     shipInputs.forEach(input => {
-      !input.value.trim()
-        ? (ship = TransportFactory.createTransport('ship'))
-        : (ship = TransportFactory.createTransport(
-            'ship',
-            id,
-            model,
-            name,
-            producedYear,
-            capacity,
-            averageSpeed,
-            countOfTeam,
-          ));
+      if(!input.value.trim()) ship = TransportFactory.createTransport('ship')
     });
 
     console.log(`Average speed: ${ship.showAverageSpeed()}`);
     console.log(`Capacity in pounds: ${ship.showCapacityInPounds()}`);
 
     shipInputs.forEach(input => {
-      input.value = '';
+      const inputValue = input;
+      inputValue.value = '';
     });
 
     const li = document.createElement('li');
@@ -84,26 +85,27 @@ export default class TransportList {
 
     let truck;
 
+    truck = TransportFactory.createTransport(
+        'truck',
+        id,
+        model,
+        producedYear,
+        capacity,
+        averageSpeed,
+        licensePlate,
+        typeOfGas,
+    )
+
     truckInputs.forEach(input => {
-      !input.value.trim()
-        ? (truck = TransportFactory.createTransport('truck'))
-        : (truck = TransportFactory.createTransport(
-            'truck',
-            id,
-            model,
-            producedYear,
-            capacity,
-            averageSpeed,
-            licensePlate,
-            typeOfGas,
-          ));
+      if(!input.value.trim() ) truck = TransportFactory.createTransport('truck')
     });
 
     console.log(`Average speed: ${truck.showAverageSpeed()}`);
     console.log(`Capacity in pounds: ${truck.showCapacityInPounds()}`);
 
     truckInputs.forEach(input => {
-      input.value = '';
+      const inputValue = input;
+      inputValue.value = '';
     });
 
     const li = document.createElement('li');

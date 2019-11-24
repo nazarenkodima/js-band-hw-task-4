@@ -1,8 +1,20 @@
-import TransportList from './models/TransportList.js';
-import CostList from './models/CostList.js';
+import TransportList from './models/TransportList';
+import CostList from './models/CostList';
 
 // Styles
 import './theme/init.css';
 
-const transportList = new TransportList();
-const costList = new CostList();
+
+function transportList() {
+    const transport = new TransportList();
+    return transport
+}
+
+function costList() {
+    const cost = new CostList();
+    return cost
+}
+
+transportList();
+costList();
+

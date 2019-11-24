@@ -24,7 +24,8 @@ export default class CostList {
     const cost = new Cost(model, costByKilogram, costByDistance);
 
     costInputs.forEach(input => {
-      input.value = '';
+      const inputValue = input;
+      inputValue.value = '';
     });
 
     const li = document.createElement('li');
